@@ -7,9 +7,9 @@ a download for Linux, MacOS, and Windows.
 
 ![Running on Itch.io](docs/goal.png)
 
-## Explanation
+## Setup
 
-### Godot Setup
+### Godot
 
 The name of the Godot project and Itch.io project URL are the same. They contain no spaces or
 invalid URL characters. They don't have to be this way, but the workflow script uses [an env called
@@ -61,7 +61,7 @@ repository secret**.
   the
   script](https://github.com/deplicator/github-godot4-itch.io/blob/afe3a1f4d3b8bd4c9aae10372dfa7d97f03ec9bf/.github/workflows/deploy.yml#L8)
 
-## Workflow
+## Using
 
 The workflow defined at `.github\workflows\deploy.yml` runs manually.
 
@@ -69,9 +69,7 @@ It is started by navigating to the Actions tab, choosing the workflow named `Dep
 then clicking the "Run Workflow" dropdown. From there the branch can be chosen, then click the "Run
 workflow" button.
 
-## Jobs
-
-### Build
+### Build Job
 
 Builds the Godot project for four platforms; Linux, MacOS, Web, and Windows.
 
@@ -82,8 +80,15 @@ Builds the Godot project for four platforms; Linux, MacOS, Web, and Windows.
   - Several files for Web, they all get [compressed into a
     zip](https://github.com/deplicator/github-godot4-itch.io/blob/afe3a1f4d3b8bd4c9aae10372dfa7d97f03ec9bf/.github/workflows/deploy.yml#L45)
 
-### Publish
+### Publish Job
 
 [Pushes
 everything](https://github.com/deplicator/github-godot4-itch.io/blob/afe3a1f4d3b8bd4c9aae10372dfa7d97f03ec9bf/.github/workflows/deploy.yml#L78C13-L78C27)
 to Itch.io using [Butler](https://itch.io/docs/butler/).
+
+### Completion
+
+When done, the project will be updated with the version built from this repository. Itch.io will
+also show a notification.
+
+![Itch.io notification](docs/itchio-notificaiton.png)
