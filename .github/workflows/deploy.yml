@@ -6,7 +6,7 @@ on: workflow_dispatch
 env:
   BUTLER_API_KEY: ${{secrets.ITCHIO_API_KEY}} # Repository Settings -> Secrets and variables -> Actions -> New repository secret
   ITCHIO_USERNAME: ${{secrets.ITCHIO_USERNAME}}
-  PROJECT_NAME: "github-godot4-itch.io" # See README.md about project, channel, and export file naming conventions
+  PROJECT_NAME: "github-godot4-itchio" # See README.md about project, channel, and export file naming conventions
 
 jobs:
   Build:

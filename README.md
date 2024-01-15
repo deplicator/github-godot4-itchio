@@ -69,6 +69,8 @@ It is started by navigating to the Actions tab, choosing the workflow named `Dep
 then clicking the "Run Workflow" dropdown. From there the branch can be chosen, then click the "Run
 workflow" button.
 
+![In the Action tab](docs/start-workflow.png)
+
 ### Build Job
 
 Builds the Godot project for four platforms; Linux, MacOS, Web, and Windows.
