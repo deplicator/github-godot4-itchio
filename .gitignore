@@ -1,2 +1,8 @@
 # Godot 4+ specific ignores
 .godot/
+
+# Build Directories
+exports/*
+!exports/html
+exports/html/*
+!exports/html/.gitkeep
