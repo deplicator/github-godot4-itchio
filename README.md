@@ -94,3 +94,8 @@ When done, the project will be updated with the version built from this reposito
 also show a notification.
 
 ![Itch.io notification](docs/itchio-notificaiton.png)
+
+## Related
+
+- [Godot4: GitLab -> Itch.io](https://gitlab.com/deplicator/gitlab-godot4-itchio) - the same project
+  but for GitLab
