@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvw1kx0col7oa"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://x1m5otmk4hy0" path="res://blocks/block_physics_material.tres" id="1_d8goa"]
+[ext_resource type="Script" path="res://blocks/block.gd" id="1_re6so"]
+[ext_resource type="Texture2D" uid="uid://dci1q7mlh2vqg" path="res://blocks/gitea.png" id="2_f4yvj"]
+
+[node name="GiteaBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_d8goa")
+script = ExtResource("1_re6so")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_f4yvj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-135, -118, -108, -118, -1, -112, 73, -112, 178, -117, 184, -116, 189, -110, 192, -98, 192, -74, 188, -43, 176, 6, 159, 50, 138, 88, 123, 105, 113, 113, 102, 118, -20, 118, -32, 113, -46, 102, -61, 85, -76, 61, -83, 47, -98, 46, -124, 41, -145, 33, -161, 23, -175, 8, -187, -15, -192, -37, -192, -60, -187, -79, -175, -97, -158, -110)

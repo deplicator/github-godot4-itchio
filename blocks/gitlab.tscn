@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0kix7exe5ix3"]
+
+[ext_resource type="Script" path="res://blocks/block.gd" id="1_8xqmq"]
+[ext_resource type="PhysicsMaterial" uid="uid://x1m5otmk4hy0" path="res://blocks/block_physics_material.tres" id="1_mxupp"]
+[ext_resource type="Texture2D" uid="uid://bus6ntivew5iy" path="res://blocks/gitlab.png" id="2_5y0tb"]
+
+[node name="GitLabBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_mxupp")
+script = ExtResource("1_8xqmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5y0tb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, -92, -56, -92, -36, -33, 35, -33, 56, -92, 64, -92, 95, -14, 95, 8, 86, 29, 3, 92, -3, 92, -86, 29, -95, 8, -95, -14)

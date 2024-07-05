@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc2vjvajso6q1"]
+
+[ext_resource type="Script" path="res://blocks/block.gd" id="1_1nkkc"]
+[ext_resource type="PhysicsMaterial" uid="uid://x1m5otmk4hy0" path="res://blocks/block_physics_material.tres" id="1_wy20f"]
+[ext_resource type="Texture2D" uid="uid://ccv0kh4ja4dmh" path="res://blocks/itchio.png" id="2_g1dcs"]
+
+[node name="ItchioBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_wy20f")
+script = ExtResource("1_1nkkc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(96, -117, 130, -78, 130, -60, 123, -47, 110, -40, 110, 70, 100, 110, 45, 117, -45, 117, -100, 110, -110, 70, -110, -40, -123, -47, -130, -60, -130, -78, -96, -117)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g1dcs")

@@ -13,4 +13,14 @@ config_version=5
 config/name="github-godot4-itch.io"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
+
+[display]
+
+window/energy_saving/keep_screen_on=false
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.446299, 0.30468, 0.538311, 1)

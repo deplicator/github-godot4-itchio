@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1nbejl1flivm"]
+[gd_scene load_steps=7 format=3 uid="uid://c1nbejl1flivm"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_uh4e3"]
+
+[sub_resource type="Curve2D" id="Curve2D_0c6ej"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, -500, 0, 0, 0, 0, 1122, -500)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_251ak"]
+size = Vector2(1152, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iielc"]
+size = Vector2(30, 1200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iv6gp"]
+size = Vector2(10, 10)
+
+[sub_resource type="Environment" id="Environment_nxi8e"]
+background_mode = 3
+background_color = Color(0.52, 0.450667, 0, 1)
+tonemap_mode = 3
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_uh4e3")
@@ -9,8 +29,93 @@ script = ExtResource("1_uh4e3")
 modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 648.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "
 
-[center]This is a Godot 4 project pushed to Itch.io using Github Actions![/center]"
+[center]This is a Godot 4 project pushed to Itch.io using GitHub Actions![/center]"
+
+[node name="BlockAddTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SpawnPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0c6ej")
+
+[node name="SpawnPoint" type="PathFollow2D" parent="SpawnPath"]
+position = Vector2(30, -500)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Walls"]
+position = Vector2(576, 663)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor"]
+shape = SubResource("RectangleShape2D_251ak")
+
+[node name="WallLeft" type="StaticBody2D" parent="Walls"]
+position = Vector2(-15, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallLeft"]
+shape = SubResource("RectangleShape2D_iielc")
+
+[node name="WallRight" type="StaticBody2D" parent="Walls"]
+position = Vector2(1167, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/WallRight"]
+shape = SubResource("RectangleShape2D_iielc")
+
+[node name="Plinker" type="StaticBody2D" parent="Walls"]
+position = Vector2(230, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker2" type="StaticBody2D" parent="Walls"]
+position = Vector2(460, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker2"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker3" type="StaticBody2D" parent="Walls"]
+position = Vector2(690, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker3"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker4" type="StaticBody2D" parent="Walls"]
+position = Vector2(920, -100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker4"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker5" type="StaticBody2D" parent="Walls"]
+position = Vector2(345, -320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker5"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker6" type="StaticBody2D" parent="Walls"]
+position = Vector2(575, -320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker6"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="Plinker7" type="StaticBody2D" parent="Walls"]
+position = Vector2(805, -320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Plinker7"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_iv6gp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nxi8e")
+
+[node name="Blocks" type="Node" parent="."]

@@ -1,4 +1,4 @@
-# Godot4: Github -> Itch.io
+# Github Actions: Godot4 -> Itch.io
 
 This is an example project with a single GitHub actions workflow to push a project to
 [Itch.io](itch.io). The project will be playable on Itch.io at

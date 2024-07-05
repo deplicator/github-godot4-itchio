@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://kdn27vd4m0pb"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://x1m5otmk4hy0" path="res://blocks/block_physics_material.tres" id="1_frpsr"]
+[ext_resource type="Script" path="res://blocks/block.gd" id="1_tb0q2"]
+[ext_resource type="Texture2D" uid="uid://cc473ghpx30ry" path="res://blocks/github.png" id="2_n5b0j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ah5jh"]
+radius = 113.004
+
+[node name="GitHubBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_frpsr")
+script = ExtResource("1_tb0q2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n5b0j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ah5jh")

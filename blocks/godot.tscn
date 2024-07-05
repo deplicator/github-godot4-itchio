@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4l4tmd4sp7ma"]
+
+[ext_resource type="Script" path="res://blocks/block.gd" id="1_5l2ja"]
+[ext_resource type="PhysicsMaterial" uid="uid://x1m5otmk4hy0" path="res://blocks/block_physics_material.tres" id="1_dd1sf"]
+[ext_resource type="Texture2D" uid="uid://dfsw8itjkqqqx" path="res://blocks/godot.png" id="2_koup3"]
+
+[node name="GodotBlock" type="RigidBody2D"]
+physics_material_override = ExtResource("1_dd1sf")
+script = ExtResource("1_5l2ja")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(12, -88, 24, -110, 54, -100, 53, -74, 75, -58, 95, -70, 115, -43, 102, -23, 102, 60, 95, 77, 75, 95, 30, 107, -30, 107, -75, 95, -95, 77, -102, 60, -102, -23, -115, -43, -95, -70, -75, -58, -53, -74, -54, -100, -24, -110, -12, -88)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_koup3")
