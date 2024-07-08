@@ -97,5 +97,7 @@ also show a notification.
 
 ## Related
 
-- [Godot4: GitLab -> Itch.io](https://gitlab.com/deplicator/gitlab-godot4-itchio) - the same project
-  but for GitLab
+- [Gitea Actions: Godot4 -> Itch.io](https://gitea.com/deplicator/gitea-godot4-itchio)
+- [GitLab CD/CD: Godot4 -> Itch.io](https://gitlab.com/deplicator/gitlab-godot4-itchio)
+- [A Related Blog Post](https://deplicator.gitlab.io/posts/2024/2-devops-for-indie-games/)
+- [And another Related Blog Post](https://deplicator.gitlab.io/posts/2024/3-more-game-related-devops/)
